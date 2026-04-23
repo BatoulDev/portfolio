@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #FFF9ED;
+  --surface-container-low: #F9F3E7;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-highest: #F5EEE0;
+  --primary: #795558;
+  --primary-container: #E2B4B7;
+  --primary-fixed-dim: #EABBBE;
+  --on-surface: #1D1C15;
+  --on-primary: #FFFFFF;
+  --on-primary-container: #3D1F22;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+::selection {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+input, textarea, button {
+  font-family: inherit;
+}
+
+.soft-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: var(--primary-container);
+  opacity: 0.3;
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-container) 0%, var(--primary-fixed-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #E2B4B7 0%, #EABBBE 100%);
+  color: white;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(29, 28, 21, 0.04);
+}
+
+.btn-tertiary {
+  color: var(--primary);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-tertiary:hover {
+  background: rgba(245, 238, 224, 0.5);
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(29, 28, 21, 0.06);
+}
+
+.input-field {
+  width: 100%;
+  background: #F5EEE0;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #E2B4B7;
+  box-shadow: 0 0 0 8px rgba(226, 180, 183, 0.2);
+}
+
+.label-uppercase {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: rgba(121, 85, 88, 0.8);
+}
+
+.ghost-border {
+  border: 1px solid rgba(29, 28, 21, 0.15);
+  transition: border-color 0.3s;
+}
+
+.ghost-border:hover {
+  border-color: rgba(29, 28, 21, 0.4);
+}
+
+/* Custom spacing utilities */
+.py-section-lg {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* Custom font sizes */
+.text-display-lg {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-display-md {
+  font-size: 3rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-body-lg {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile responsive text */
+@media (max-width: 768px) {
+  .text-display-lg {
+    font-size: 2.5rem;
+  }
+  
+  .text-display-md {
+    font-size: 2rem;
+  }
+}
