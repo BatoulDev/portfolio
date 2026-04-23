@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const experiences = [
   {
     title: 'Full-Stack Developer Intern',
-    company: 'TechTalk',
+    company: 'TechTalks',
     date: 'Present',
     description: 'Currently working on real-world applications and gaining hands-on experience in full-stack development.'
   },
