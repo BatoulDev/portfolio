@@ -11,11 +11,11 @@ const projects = [
     url: 'https://github.com/BatoulDev/ai-market-analysis-bot'
   },
   {
-    name: 'RAG Search System',
-    repo: 'rag-search-from-pdf-n8n',
-    description: 'Retrieval-Augmented Generation system enabling intelligent search across PDF documents with context-aware responses.',
-    technologies: ['JavaScript', 'RAG', 'NLP', 'n8n'],
-    url: 'https://github.com/BatoulDev/rag-search-from-pdf-n8n'
+    name: 'KnowledgeFlow AI',
+    repo: 'knowledgeflow-ai',
+    description: 'Agentic RAG document assistant that lets users upload PDF, DOC, and DOCX files and get grounded answers with source citations. Built on two n8n workflows: document ingestion with OpenAI embeddings stored in Pinecone, and an agentic chat flow that decides when to retrieve context and keeps conversation memory across sessions, with safeguards against hallucination and prompt injection.',
+    technologies: ['React', 'n8n', 'OpenAI', 'Pinecone', 'Docker'],
+    url: 'https://github.com/BatoulDev/knowledgeflow-ai'
   },
   {
     name: 'AI Invoice Automation System',
