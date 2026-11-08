@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 
 const education = [
   {
-    title: "Master's in Information Systems",
+    title: 'Master 1 (M1) in Information Systems Engineering',
     university: 'Lebanese University',
-    description: 'Focused on advanced systems design, CI/CD practices, scalable architectures, and modern software development workflows.',
-    status: 'Present'
+    description: 'Completed the first year of the Master\'s program, building on and extending my foundation in software engineering and information systems.',
+    status: 'Completed M1'
   },
   {
     title: "Bachelor's in Information Technology",

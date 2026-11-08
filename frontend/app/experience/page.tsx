@@ -4,22 +4,49 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Full-Stack Developer Intern',
-    company: 'TechTalks',
+    title: 'UI/UX Consultant & AI Automation Engineer',
+    company: 'Majlisync',
     date: 'Present',
-    description: 'Currently working on real-world applications and gaining hands-on experience in full-stack development.'
+    description: 'Providing UI/UX consulting and identifying automation opportunities within existing business processes. Involved in designing workflows and contributing to AI automation initiatives, coordinating around technical requirements and approved workflows.'
+  },
+  {
+    title: 'Full-Stack Developer Intern',
+    company: 'TechTalks · Internship · Remote',
+    date: 'May 2026 – Jul 2026',
+    projects: [
+      {
+        name: 'CERES — Nutrition & Meal Planning Platform',
+        bullets: [
+          'Collaborated within an Agile team on a full-stack nutrition and meal-planning platform.',
+          'Worked with Next.js, React, TypeScript, Tailwind CSS, and MongoDB.',
+          'Contributed to features involving recipe management, nutrition tracking, and weekly meal planning.'
+        ],
+        linkLabel: 'View CERES Live Demo',
+        linkHref: 'https://mceres.vercel.app/'
+      },
+      {
+        name: 'TeamUp Hub — Student Collaboration Platform',
+        bullets: [
+          'Led the development effort as Team Leader within a six-member team.',
+          'Contributed to frontend functionality, backend integration, and user experience.',
+          'Worked on a platform supporting project collaboration, shared workspaces, and team management.'
+        ],
+        linkLabel: 'View TeamUp Hub',
+        linkHref: 'https://teamuphub.vercel.app/'
+      }
+    ]
   },
   {
     title: 'Full-Stack Developer Intern',
     company: 'XpertBot',
     date: 'Aug 2025 – Sep 2025',
-    description: 'Worked on building scalable full-stack features and improving application performance.'
+    description: 'Built a full-stack e-commerce website using React and Laravel.'
   },
   {
-    title: 'Frontend Developer Intern',
+    title: 'Full-Stack Developer Intern',
     company: 'Click Round Technologies',
     date: 'Apr 2025 – Jun 2025',
-    description: 'Built dynamic web features and strengthened my ability to design responsive and user-friendly interfaces.'
+    description: 'Worked across the stack: developing frontend interfaces and PHP backend functionality, using AJAX for dynamic data updates, and integrating the frontend with the backend.'
   }
 ]
 
@@ -73,9 +100,35 @@ export default function Experience() {
                     <p className="text-primary font-medium mb-3">
                       {exp.company}
                     </p>
-                    <p className="text-on-surface/70">
-                      {exp.description}
-                    </p>
+                    {exp.description && (
+                      <p className="text-on-surface/70">
+                        {exp.description}
+                      </p>
+                    )}
+                    {exp.projects && (
+                      <div className="space-y-6">
+                        {exp.projects.map((project) => (
+                          <div key={project.name}>
+                            <h4 className="font-semibold text-on-surface mb-2">
+                              {project.name}
+                            </h4>
+                            <ul className="list-disc pl-5 space-y-1 text-on-surface/70">
+                              {project.bullets.map((bullet) => (
+                                <li key={bullet}>{bullet}</li>
+                              ))}
+                            </ul>
+                            <a
+                              href={project.linkHref}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block mt-2 text-primary font-medium hover:underline"
+                            >
+                              {project.linkLabel} →
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>

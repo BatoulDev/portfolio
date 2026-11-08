@@ -6,7 +6,8 @@ export default function About() {
   const skills = {
     Frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     'Backend & Databases': ['Node.js', 'REST APIs', 'PostgreSQL', 'MongoDB', 'MySQL'],
-    Tools: ['Git', 'GitHub', 'Postman']
+    'AI & Automation': ['n8n', 'OpenAI', 'Pinecone'],
+    Tools: ['Git', 'GitHub', 'Postman', 'Docker']
   }
 
   const philosophy = [
@@ -40,16 +41,18 @@ export default function About() {
                 About <span className="text-gradient">Me</span>
               </h1>
               <p className="text-body-lg text-on-surface/70 mb-6">
-                I am a full-stack developer specializing in building scalable and well-structured web applications. I focus on developing efficient backend systems, designing reliable APIs, and delivering maintainable solutions using modern technologies.
+                I&apos;m a Full-Stack Developer and AI Automation Engineer focused on building modern web applications, intelligent automation workflows, and AI-powered solutions. I work across frontend and backend development, API integrations, and workflow orchestration, with an interest in designing reliable systems that solve real-world problems.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { title: 'Backend Systems', desc: 'Building structured and efficient server-side logic and architectures.' },
                 { title: 'API Development', desc: 'Designing and integrating reliable and scalable APIs.' },
                 { title: 'Problem Solving', desc: 'Analyzing challenges and delivering effective technical solutions.' },
-                { title: 'Scalable Solutions', desc: 'Developing applications with performance and scalability in mind.' }
+                { title: 'Scalable Solutions', desc: 'Developing applications with performance and scalability in mind.' },
+                { title: 'AI Automation', desc: 'Designing automated workflows that connect applications, streamline processes, and reduce repetitive work.' },
+                { title: 'AI Agents', desc: 'Building AI-powered agents that combine language models, tools, and external data to support intelligent workflows.' }
               ].map((item) => (
                 <div key={item.title} className="bg-surface-container-lowest rounded-xl p-6 text-center ghost-border">
                   <p className="font-display text-lg font-semibold text-primary mb-2">{item.title}</p>

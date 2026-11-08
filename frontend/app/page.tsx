@@ -19,11 +19,11 @@ export default function Home() {
           >
             <p className="label-uppercase mb-4">Welcome to my world</p>
             <h1 className="font-display text-display-lg font-semibold text-on-surface mb-6">
-              Full-Stack <br />
-              <span className="text-gradient">Developer</span>
+              Full-Stack Developer <br />
+              <span className="text-gradient">& AI Automation Engineer</span>
             </h1>
             <p className="text-body-lg text-on-surface/70 mb-8 max-w-lg">
-              I build modern, scalable web applications with a focus on clean design and performance.
+              I build reliable, real-world web applications and design AI-driven automation workflows that streamline processes and save time.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/projects" className="btn-primary">

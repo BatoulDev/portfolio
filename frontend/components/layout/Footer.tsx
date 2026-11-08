@@ -43,7 +43,7 @@ export default function Footer() {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/batoul-abdulrahman-37ab13315/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm text-on-surface/70 hover:text-primary transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
                 LinkedIn
               </a>
               <a 
-                href="mailto:batoul@example.com"
+                href="mailto:batoulabedelrahman5@gmail.com"
                 className="text-sm text-on-surface/70 hover:text-primary transition-colors"
               >
                 Email
